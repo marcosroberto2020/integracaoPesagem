@@ -7,6 +7,10 @@ const Pesagemimp = database.define('pesagemimp', {
         allowNull: false,
         primaryKey: true
     },
+    filial: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     dataPesagem: {
         type: Sequelize.STRING,
         allowNull: false
@@ -25,6 +29,6 @@ const Pesagemimp = database.define('pesagemimp', {
     },
 })
 // Criar a tabela se não existir
-
+//Pesagemimp.sync({ force: true })
 
 module.exports = Pesagemimp;
