@@ -3,8 +3,6 @@ const app = express();
 const Pesagem = require('./models/pesagemimp');
 var porta = process.env.PORT || 8080;
 
-
-
 app.use(express.json());
 
 app.get("/", async (req, res) => {

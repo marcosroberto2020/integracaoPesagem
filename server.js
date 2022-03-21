@@ -11,6 +11,22 @@ app.get("/", async (req, res) => {
     res.send("Página inicial - Celke");
 });
 
+
+
+app.get("/listar", async (req, res) => {
+  
+    await Pesagem.findAll().then(function(pesagens){
+        return res.json(pesagens)
+    })
+
+
+ 
+});
+
+
+
+
+
 app.post("/cadastrar", async (req, res) => {
     //console.log(req.body);
 
@@ -27,7 +43,7 @@ app.post("/cadastrar", async (req, res) => {
         });
     });
 
-    //res.send("Página cadastrar");
+ 
 });
 
 
