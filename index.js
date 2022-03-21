@@ -3,6 +3,8 @@ const app = express();
 const Pesagem = require('./models/pesagemimp');
 var porta = process.env.PORT || 8080;
 
+
+
 app.use(express.json());
 
 app.get("/", async (req, res) => {
@@ -27,6 +29,8 @@ app.post("/cadastrar", async (req, res) => {
 
     //res.send("Página cadastrar");
 });
+
+
 app.listen(porta, () => {
     console.log("Servidor iniciado na porta 8080: http://localhost:8080");
 });
