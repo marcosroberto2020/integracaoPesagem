@@ -2,10 +2,17 @@ const express = require('express');
 const app = express();
 const Pesagem = require('./models/pesagemimp');
 var porta = process.env.PORT || 8080;
-
+var cors = require('cors');
 
 
 app.use(express.json());
+
+app.use((req, res, next) =>{
+    app.use(cors());
+    next();
+});
+
+
 
 app.get("/", async (req, res) => {
     res.send("Página inicial - Celke");
